@@ -33,6 +33,8 @@ string HloOpcodeString(HloOpcode opcode) {
       return "add";
     case HloOpcode::kBatchNormTraining:
       return "batch-norm-training";
+    case HloOpcode::kBatchNormInference:
+      return "batch-norm-inference";
     case HloOpcode::kBatchNormGrad:
       return "batch-norm-grad";
     case HloOpcode::kBitcast:
@@ -93,12 +95,12 @@ string HloOpcodeString(HloOpcode opcode) {
       return "less-than-or-equal-to";
     case HloOpcode::kLog:
       return "log";
-    case HloOpcode::kLogicalAnd:
-      return "logical-and";
-    case HloOpcode::kLogicalOr:
-      return "logical-or";
-    case HloOpcode::kLogicalNot:
-      return "logical-not";
+    case HloOpcode::kAnd:
+      return "and";
+    case HloOpcode::kOr:
+      return "or";
+    case HloOpcode::kNot:
+      return "not";
     case HloOpcode::kLt:
       return "less-than";
     case HloOpcode::kMap:
@@ -137,6 +139,8 @@ string HloOpcodeString(HloOpcode opcode) {
       return "reverse";
     case HloOpcode::kRng:
       return "rng";
+    case HloOpcode::kRoundNearestAfz:
+      return "round-nearest-afz";
     case HloOpcode::kSelectAndScatter:
       return "select-and-scatter";
     case HloOpcode::kSelect:
@@ -145,6 +149,8 @@ string HloOpcodeString(HloOpcode opcode) {
       return "send";
     case HloOpcode::kSign:
       return "sign";
+    case HloOpcode::kSin:
+      return "sine";
     case HloOpcode::kSlice:
       return "slice";
     case HloOpcode::kSort:
